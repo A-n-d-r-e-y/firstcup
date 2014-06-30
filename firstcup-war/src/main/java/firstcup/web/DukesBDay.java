@@ -33,12 +33,15 @@ public class DukesBDay implements Serializable {
     protected int ageDiff;
     protected int absAgeDiff;
     protected Double averageAgeDifference;
+    protected String author;
     private static final Logger logger = Logger.getLogger("firstcup.web.DukesBDay");
 
     /**
      * Creates a new instance of DukesBDay
      */
     public DukesBDay() {
+        
+        this.author = "Morozov";
     }
 
     public String processBirthday() {
@@ -78,6 +81,14 @@ public class DukesBDay implements Serializable {
      */
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
     /**

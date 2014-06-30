@@ -31,7 +31,7 @@ public class DukesBirthdayBean {
 
     public Double getAverageAgeDifference() {
 
-        Double avgAgeDiff = (Double) em.createNamedQuery("findAverageAgeDifferenceOfAllFirstcupUsers")
+        Double avgAgeDiff = (Double) em.createNamedQuery(FirstcupUser.FIND_AVERAGE_AGE)
                 .getSingleResult();
         logger.log(Level.INFO, "Average age difference is: {0}", avgAgeDiff);
         return avgAgeDiff;

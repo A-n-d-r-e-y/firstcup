@@ -19,7 +19,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 
 @Entity
-@NamedQuery(name = "findAverageAgeDifferenceOfAllFirstcupUsers", query = "SELECT AVG(u.ageDifference) FROM FirstcupUser u")
+@NamedQuery(name = FirstcupUser.FIND_AVERAGE_AGE, query = "SELECT AVG(u.ageDifference) FROM FirstcupUser u")
 public class FirstcupUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,6 +30,8 @@ public class FirstcupUser implements Serializable {
     protected Calendar birthday;
     protected int ageDifference;
 
+    public static final String FIND_AVERAGE_AGE = "findAverageAgeDifferenceOfAllFirstcupUsers";
+    
     public FirstcupUser() {
     }
 
